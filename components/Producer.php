@@ -102,20 +102,19 @@ class Producer extends BaseRabbitMQ
     /**
      * Publishes the message and merges additional properties with basic properties
      *
-     * @param mixed  $msgBody
+     * @param mixed $msgBody
      * @param string $exchangeName
      * @param string $routingKey
-     * @param array  $additionalProperties
-     * @param array  $headers
+     * @param array $additionalProperties
+     * @param array|null $headers
      *
-     * @throws RuntimeException
      */
     public function publish(
         $msgBody,
         string $exchangeName,
         string $routingKey = '',
         array $additionalProperties = [],
-        array $headers = null
+        ?array $headers = null
     ) {
         if ($this->autoDeclare)
         {
