@@ -1,5 +1,5 @@
 {
-  "name": "mikemadisonweb/yii2-rabbitmq",
+  "name": "kcolin/yii2-rabbitmq",
   "description": "Wrapper based on php-amqplib to incorporate messaging in your Yii2 application via RabbitMQ. Inspired by RabbitMqBundle for Symfony 2, really awesome package.",
   "type": "yii2-extension",
   "keywords": ["yii2","extension","rabbitmq","amqp","message queue","distributed systems"],
@@ -21,10 +21,10 @@
   },
   "autoload": {
     "psr-4": {
-      "mikemadisonweb\\rabbitmq\\": ""
+      "kcolin\\rabbitmq\\": ""
     }
   },
   "extra": {
-    "bootstrap": "mikemadisonweb\\rabbitmq\\DependencyInjection"
+    "bootstrap": "kcolin\\rabbitmq\\DependencyInjection"
   }
 }

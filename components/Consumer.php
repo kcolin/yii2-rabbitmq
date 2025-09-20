@@ -1,11 +1,11 @@
 <?php declare(strict_types=1);
 
-namespace mikemadisonweb\rabbitmq\components;
+namespace kcolin\rabbitmq\components;
 
 use BadFunctionCallException;
 use ErrorException;
-use mikemadisonweb\rabbitmq\events\RabbitMQConsumerEvent;
-use mikemadisonweb\rabbitmq\exceptions\RuntimeException;
+use kcolin\rabbitmq\events\RabbitMQConsumerEvent;
+use kcolin\rabbitmq\exceptions\RuntimeException;
 use PhpAmqpLib\Exception\AMQPTimeoutException;
 use PhpAmqpLib\Message\AMQPMessage;
 use Throwable;
@@ -14,7 +14,7 @@ use yii\console\Controller;
 /**
  * Service that receives AMQP Messages
  *
- * @package mikemadisonweb\rabbitmq\components
+ * @package kcolin\rabbitmq\components
  */
 class Consumer extends BaseRabbitMQ
 {

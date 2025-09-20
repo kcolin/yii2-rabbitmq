@@ -1,13 +1,13 @@
 <?php declare(strict_types=1);
 
-namespace mikemadisonweb\rabbitmq\tests\controllers;
+namespace kcolin\rabbitmq\tests\controllers;
 
-use mikemadisonweb\rabbitmq\components\Consumer;
-use mikemadisonweb\rabbitmq\components\Producer;
-use mikemadisonweb\rabbitmq\components\Routing;
-use mikemadisonweb\rabbitmq\Configuration;
-use mikemadisonweb\rabbitmq\controllers\RabbitMQController;
-use mikemadisonweb\rabbitmq\tests\TestCase;
+use kcolin\rabbitmq\components\Consumer;
+use kcolin\rabbitmq\components\Producer;
+use kcolin\rabbitmq\components\Routing;
+use kcolin\rabbitmq\Configuration;
+use kcolin\rabbitmq\controllers\RabbitMQController;
+use kcolin\rabbitmq\tests\TestCase;
 use yii\base\InvalidConfigException;
 use yii\console\Controller;
 

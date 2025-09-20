@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace mikemadisonweb\rabbitmq\events;
+namespace kcolin\rabbitmq\events;
 
-use mikemadisonweb\rabbitmq\components\Consumer;
+use kcolin\rabbitmq\components\Consumer;
 use PhpAmqpLib\Message\AMQPMessage;
 use yii\base\Event;
 

@@ -1,12 +1,12 @@
 <?php declare(strict_types=1);
 
-namespace mikemadisonweb\rabbitmq;
+namespace kcolin\rabbitmq;
 
-use mikemadisonweb\rabbitmq\components\{
+use kcolin\rabbitmq\components\{
     AbstractConnectionFactory, Consumer, ConsumerInterface, Logger, Producer, Routing
 };
-use mikemadisonweb\rabbitmq\controllers\RabbitMQController;
-use mikemadisonweb\rabbitmq\exceptions\InvalidConfigException;
+use kcolin\rabbitmq\controllers\RabbitMQController;
+use kcolin\rabbitmq\exceptions\InvalidConfigException;
 use PhpAmqpLib\Connection\AbstractConnection;
 use yii\base\Application;
 use yii\base\BootstrapInterface;

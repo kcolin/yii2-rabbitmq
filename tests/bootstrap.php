@@ -12,4 +12,4 @@ if (!is_file($composerAutoload))
 }
 require_once($composerAutoload);
 require_once(__DIR__ . '/../vendor/yiisoft/yii2/Yii.php');
-Yii::setAlias('@mikemadisonweb/rabbitmq/tests', __DIR__);
+Yii::setAlias('@kcolin/rabbitmq/tests', __DIR__);

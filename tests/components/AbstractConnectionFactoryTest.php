@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
-namespace mikemadisonweb\rabbitmq\tests\components;
+namespace kcolin\rabbitmq\tests\components;
 
-use mikemadisonweb\rabbitmq\components\AbstractConnectionFactory;
-use mikemadisonweb\rabbitmq\tests\TestCase;
+use kcolin\rabbitmq\components\AbstractConnectionFactory;
+use kcolin\rabbitmq\tests\TestCase;
 use PhpAmqpLib\Connection\AbstractConnection;
 use PhpAmqpLib\Connection\AMQPLazyConnection;
 

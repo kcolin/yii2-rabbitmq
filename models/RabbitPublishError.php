@@ -1,11 +1,11 @@
 <?php
 
-namespace mikemadisonweb\rabbitmq\models;
+namespace kcolin\rabbitmq\models;
 
 use DomainException;
 use Exception;
 use InvalidArgumentException;
-use mikemadisonweb\rabbitmq\components\Producer;
+use kcolin\rabbitmq\components\Producer;
 use Yii;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;

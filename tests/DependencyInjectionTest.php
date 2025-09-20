@@ -1,13 +1,13 @@
 <?php declare(strict_types=1);
 
-namespace mikemadisonweb\rabbitmq\tests;
+namespace kcolin\rabbitmq\tests;
 
-use mikemadisonweb\rabbitmq\components\{
+use kcolin\rabbitmq\components\{
     Consumer, ConsumerInterface, Logger, Producer, Routing
 };
-use mikemadisonweb\rabbitmq\Configuration;
-use mikemadisonweb\rabbitmq\controllers\RabbitMQController;
-use mikemadisonweb\rabbitmq\exceptions\InvalidConfigException;
+use kcolin\rabbitmq\Configuration;
+use kcolin\rabbitmq\controllers\RabbitMQController;
+use kcolin\rabbitmq\exceptions\InvalidConfigException;
 use PhpAmqpLib\Connection\AbstractConnection;
 
 class DependencyInjectionTest extends TestCase

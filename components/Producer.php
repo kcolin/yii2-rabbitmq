@@ -1,16 +1,16 @@
 <?php declare(strict_types=1);
 
-namespace mikemadisonweb\rabbitmq\components;
+namespace kcolin\rabbitmq\components;
 
-use mikemadisonweb\rabbitmq\events\RabbitMQPublisherEvent;
-use mikemadisonweb\rabbitmq\exceptions\RuntimeException;
+use kcolin\rabbitmq\events\RabbitMQPublisherEvent;
+use kcolin\rabbitmq\exceptions\RuntimeException;
 use PhpAmqpLib\Message\AMQPMessage;
 use PhpAmqpLib\Wire\AMQPTable;
 
 /**
  * Service that sends AMQP Messages
  *
- * @package mikemadisonweb\rabbitmq\components
+ * @package kcolin\rabbitmq\components
  */
 class Producer extends BaseRabbitMQ
 {

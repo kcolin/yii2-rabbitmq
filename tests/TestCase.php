@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace mikemadisonweb\rabbitmq\tests;
+namespace kcolin\rabbitmq\tests;
 
-use mikemadisonweb\rabbitmq\DependencyInjection;
+use kcolin\rabbitmq\DependencyInjection;
 use Yii;
 use yii\helpers\ArrayHelper;
 
@@ -123,7 +123,7 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
     /**
      * Load extension to test app instance
      * @param array $config
-     * @throws \mikemadisonweb\rabbitmq\exceptions\InvalidConfigException
+     * @throws \kcolin\rabbitmq\exceptions\InvalidConfigException
      */
     protected function loadExtension(array $config)
     {

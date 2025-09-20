@@ -1,8 +1,8 @@
 <?php
 
-namespace mikemadisonweb\rabbitmq\helpers;
+namespace kcolin\rabbitmq\helpers;
 
-use mikemadisonweb\rabbitmq\Configuration;
+use kcolin\rabbitmq\Configuration;
 use Yii;
 use yii\base\BaseObject;
 

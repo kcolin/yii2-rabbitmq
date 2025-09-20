@@ -1,14 +1,14 @@
 <?php declare(strict_types=1);
 
-namespace mikemadisonweb\rabbitmq\tests\components;
+namespace kcolin\rabbitmq\tests\components;
 
-use mikemadisonweb\rabbitmq\components\{
+use kcolin\rabbitmq\components\{
     Logger, Producer, Routing
 };
-use mikemadisonweb\rabbitmq\Configuration;
-use mikemadisonweb\rabbitmq\events\RabbitMQPublisherEvent;
-use mikemadisonweb\rabbitmq\exceptions\RuntimeException;
-use mikemadisonweb\rabbitmq\tests\TestCase;
+use kcolin\rabbitmq\Configuration;
+use kcolin\rabbitmq\events\RabbitMQPublisherEvent;
+use kcolin\rabbitmq\exceptions\RuntimeException;
+use kcolin\rabbitmq\tests\TestCase;
 use PhpAmqpLib\Channel\AMQPChannel;
 use PhpAmqpLib\Connection\AMQPLazyConnection;
 

@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace mikemadisonweb\rabbitmq\components;
+namespace kcolin\rabbitmq\components;
 
 use PhpAmqpLib\Connection\AbstractConnection;
 

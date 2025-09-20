@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
-namespace mikemadisonweb\rabbitmq\tests;
+namespace kcolin\rabbitmq\tests;
 
-use mikemadisonweb\rabbitmq\Configuration;
-use mikemadisonweb\rabbitmq\exceptions\InvalidConfigException;
+use kcolin\rabbitmq\Configuration;
+use kcolin\rabbitmq\exceptions\InvalidConfigException;
 use yii\base\UnknownPropertyException;
 
 class ConfigurationTest extends TestCase

@@ -1,6 +1,6 @@
 <?php
 
-namespace mikemadisonweb\rabbitmq\migrations;
+namespace kcolin\rabbitmq\migrations;
 
 use yii\db\Migration;
 

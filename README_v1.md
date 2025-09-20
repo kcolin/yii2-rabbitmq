@@ -2,8 +2,8 @@ RabbitMQ Extension for Yii2
 ==================
 Wrapper based on php-amqplib to incorporate messaging in your Yii2 application via RabbitMQ. Inspired by RabbitMqBundle for Symfony framework which is awesome.
 
-[![Latest Stable Version](https://poser.pugx.org/mikemadisonweb/yii2-rabbitmq/v/stable)](https://packagist.org/packages/mikemadisonweb/yii2-rabbitmq)
-[![License](https://poser.pugx.org/mikemadisonweb/yii2-rabbitmq/license)](https://packagist.org/packages/mikemadisonweb/yii2-rabbitmq)
+[![Latest Stable Version](https://poser.pugx.org/kcolin/yii2-rabbitmq/v/stable)](https://packagist.org/packages/kcolin/yii2-rabbitmq)
+[![License](https://poser.pugx.org/kcolin/yii2-rabbitmq/license)](https://packagist.org/packages/kcolin/yii2-rabbitmq)
 
 Installation
 ------------
@@ -11,11 +11,11 @@ The preferred way to install this extension is through [composer](http://getcomp
 
 Either run
 ```
-php composer.phar require mikemadisonweb/yii2-rabbitmq
+php composer.phar require kcolin/yii2-rabbitmq
 ```
 or add
 ```json
-"mikemadisonweb/yii2-rabbitmq": "^1.7.0"
+"kcolin/yii2-rabbitmq": "^1.7.0"
 ```
 to the require section of your `composer.json` file.
 
@@ -29,7 +29,7 @@ return [
     'components'    => [
         // ...
         'rabbitmq'  => [
-            'class' => 'mikemadisonweb\rabbitmq\Configuration',
+            'class' => 'kcolin\rabbitmq\Configuration',
             'connections' => [
                 'default' => [
                     'host' => '127.0.0.1',
@@ -74,13 +74,13 @@ return [
     ],
     // should be in console.php
     'controllerMap' => [
-        'rabbitmq-consumer' => \mikemadisonweb\rabbitmq\controllers\ConsumerController::class,
-        'rabbitmq-producer' => \mikemadisonweb\rabbitmq\controllers\ProducerController::class,
+        'rabbitmq-consumer' => \kcolin\rabbitmq\controllers\ConsumerController::class,
+        'rabbitmq-producer' => \kcolin\rabbitmq\controllers\ProducerController::class,
     ],
     // ...
 ];
 ```
-To use this extension you should be familiar with the basic concepts of RabbitMQ. If you are not confident in your knowledge I suggest reading [this article](https://mikemadisonweb.github.io/2017/05/04/tldr-series-rabbitmq/).
+To use this extension you should be familiar with the basic concepts of RabbitMQ. If you are not confident in your knowledge I suggest reading [this article](https://kcolin.github.io/2017/05/04/tldr-series-rabbitmq/).
 
 The 'callback' parameter can be a class name or a service name from [dependency injection container](http://www.yiiframework.com/doc-2.0/yii-di-container.html). Starting from Yii version 2.0.11 you can configure your container like this:
 ```php
@@ -222,7 +222,7 @@ As the consumer worker will read messages from the queue, it executes a callback
 
 namespace components\rabbitmq;
 
-use mikemadisonweb\rabbitmq\components\ConsumerInterface;
+use kcolin\rabbitmq\components\ConsumerInterface;
 use PhpAmqpLib\Message\AMQPMessage;
 
 class ImportDataConsumer implements ConsumerInterface
@@ -250,7 +250,7 @@ $producer = \Yii::$container->get(sprintf('rabbit_mq.producer.%s', 'import_data'
 $msg = serialize(['dataset_id' => $dataset->id, 'linked_datasets' => []]);
 $producer->publish($msg, 'import_data');
 ```
-This template for a service name 'rabbit_mq.producer.%s' is also available as a constant mikemadisonweb\rabbitmq\components\BaseRabbitMQ::PRODUCER_SERVICE_NAME. It's needed because producer classes are lazy loaded, that means they are only got created on demand. Likewise the Connection class also got created on demand, that means a connection to RabbitMQ would not be established on each request.
+This template for a service name 'rabbit_mq.producer.%s' is also available as a constant kcolin\rabbitmq\components\BaseRabbitMQ::PRODUCER_SERVICE_NAME. It's needed because producer classes are lazy loaded, that means they are only got created on demand. Likewise the Connection class also got created on demand, that means a connection to RabbitMQ would not be established on each request.
 
 Options
 -------------

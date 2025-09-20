@@ -1,11 +1,11 @@
 <?php declare(strict_types=1);
 
-namespace mikemadisonweb\rabbitmq;
+namespace kcolin\rabbitmq;
 
-use mikemadisonweb\rabbitmq\components\Consumer;
-use mikemadisonweb\rabbitmq\components\Producer;
-use mikemadisonweb\rabbitmq\components\Routing;
-use mikemadisonweb\rabbitmq\exceptions\InvalidConfigException;
+use kcolin\rabbitmq\components\Consumer;
+use kcolin\rabbitmq\components\Producer;
+use kcolin\rabbitmq\components\Routing;
+use kcolin\rabbitmq\exceptions\InvalidConfigException;
 use PhpAmqpLib\Connection\AbstractConnection;
 use PhpAmqpLib\Connection\AMQPLazyConnection;
 use PhpAmqpLib\Connection\AMQPSSLConnection;

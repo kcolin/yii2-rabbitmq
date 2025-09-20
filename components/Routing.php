@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace mikemadisonweb\rabbitmq\components;
+namespace kcolin\rabbitmq\components;
 
-use mikemadisonweb\rabbitmq\exceptions\RuntimeException;
+use kcolin\rabbitmq\exceptions\RuntimeException;
 use PhpAmqpLib\Channel\AMQPChannel;
 use PhpAmqpLib\Connection\AbstractConnection;
 use PhpAmqpLib\Exception\AMQPProtocolChannelException;

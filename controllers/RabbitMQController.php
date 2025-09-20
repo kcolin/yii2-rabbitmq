@@ -1,13 +1,13 @@
 <?php declare(strict_types=1);
 declare(ticks=1);
 
-namespace mikemadisonweb\rabbitmq\controllers;
+namespace kcolin\rabbitmq\controllers;
 
 use BadFunctionCallException;
 use InvalidArgumentException;
-use mikemadisonweb\rabbitmq\components\Consumer;
-use mikemadisonweb\rabbitmq\components\Routing;
-use mikemadisonweb\rabbitmq\Configuration;
+use kcolin\rabbitmq\components\Consumer;
+use kcolin\rabbitmq\components\Routing;
+use kcolin\rabbitmq\Configuration;
 use Yii;
 use yii\base\Action;
 use yii\console\Controller;
@@ -17,7 +17,7 @@ use yii\helpers\Console;
 /**
  * RabbitMQ extension functionality
  *
- * @package mikemadisonweb\rabbitmq\controllers
+ * @package kcolin\rabbitmq\controllers
  */
 class RabbitMQController extends Controller
 {

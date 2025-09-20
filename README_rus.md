@@ -11,7 +11,7 @@ RabbitMQ Extension for Yii2
 <?php
 
 use app\components\TestConsumer;
-use mikemadisonweb\rabbitmq\Configuration;
+use kcolin\rabbitmq\Configuration;
 use PhpAmqpLib\Connection\AMQPLazyConnection;
 use PhpAmqpLib\Connection\AMQPSSLConnection;
 
@@ -71,7 +71,7 @@ return [
 
 --------------------
 
-**Настройка продюсеров** сводится к тому, что неотправленные сообщения сохраняются в таблице `rabbit_publish_error`, класс `\mikemadisonweb\rabbitmq\models\RabbitPublishError`, и отправляются, например, по крону.
+**Настройка продюсеров** сводится к тому, что неотправленные сообщения сохраняются в таблице `rabbit_publish_error`, класс `\kcolin\rabbitmq\models\RabbitPublishError`, и отправляются, например, по крону.
 
 * в файле конфига консольного приложения в секции controllerMap прописываем namespace для миграций компонента
 
@@ -81,7 +81,7 @@ return [
         'migrate' => [
             'class' => 'yii\console\controllers\MigrateController',
             'migrationNamespaces' => [
-                'mikemadisonweb\rabbitmq\migrations'
+                'kcolin\rabbitmq\migrations'
             ],
         ],
     ],
@@ -156,7 +156,7 @@ public function actionPublish()
     ],
 ```  
 
-* Для автоматической генерации юнитов systemd рекомендуется использовать хелпер `\mikemadisonweb\rabbitmq\helpers\CreateUnitHelper`
+* Для автоматической генерации юнитов systemd рекомендуется использовать хелпер `\kcolin\rabbitmq\helpers\CreateUnitHelper`
 
 При объявлении хелпера необходимо определить следующие поля:
 
@@ -205,7 +205,7 @@ WantedBy=multi-user.target';
 
 namespace app\commands;
 
-use mikemadisonweb\rabbitmq\helpers\CreateUnitHelper;
+use kcolin\rabbitmq\helpers\CreateUnitHelper;
 use yii\console\Controller;
 use Yii;
 
